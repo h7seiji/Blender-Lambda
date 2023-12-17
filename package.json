@@ -1,0 +1,18 @@
+{
+  "name": "Blender-Lambda",
+  "version": "1.0.0",
+  "description": "Run Blender in AWS Lambda",
+  "main": "index.js",
+  "repository": "git@github.com:h7seiji/Blender-Lambda.git",
+  "author": "h7seiji <helder_seiji@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "serverless deploy --stage $STAGE"
+  },
+  "dependencies": {
+    "serverless": "^3.38.0"
+  },
+  "devDependencies": {
+    "serverless-python-requirements": "^6.0.1"
+  }
+}

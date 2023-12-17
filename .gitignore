@@ -1,0 +1,46 @@
+# Distribution / packaging
+.Python
+env/
+venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Serverless directories
+.serverless
+node_modules
+
+# compiled
+*.pyc
+
+# IDEs/editors
+.idea
+*.iml
+.vscode
+*~
+
+# notebook
+*.ipynb_checkpoints
+
+# DotEnv configuration
+.env
+
+# MacOS file
+.DS_Store
+
+# Logs
+*.log
+
+# SSL Certificates
+ssl

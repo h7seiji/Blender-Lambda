@@ -1,0 +1,35 @@
+service: Blender-Lambda
+frameworkVersion: "3"
+
+custom:
+  defaultStage: dev
+  pythonRequirements:
+    dockerizePip: non-linux
+    layer: true
+    useDownloadCache: false
+    useStaticCache: false
+  serverless-offline:
+    httpPort: 5000
+    noPrependStageInUrl: true
+
+provider:
+  name: aws
+  runtime: python3.9
+  ecr:
+    images:
+      blender:
+        path: ./
+
+functions:
+  blender:
+    image:
+      name: blender
+    timeout: 900
+    memorySize: 10240
+    events:
+      - httpApi:
+          path: /blender
+          method: get
+
+plugins:
+  - serverless-python-requirements
